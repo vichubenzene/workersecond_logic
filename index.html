@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Worker Example - Time & CPU Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    #task-log {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .cpu-load {
+      margin-top: 20px;
+    }
+    button {
+      margin-right: 10px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web Worker Example - Updates & CPU Task Tracking</h1>
+  <p>The latest updates will appear at the top of the list:</p>
+
+  <div id="output"></div>
+
+  <div class="cpu-load">
+    <h2>Increase CPU Load</h2>
+    <button onclick="simulateCpuLoad(1)">Level 1</button>
+    <button onclick="simulateCpuLoad(2)">Level 2</button>
+    <button onclick="simulateCpuLoad(3)">Level 3</button>
+    <button onclick="simulateCpuLoad(4)">Level 4</button>
+    <button onclick="simulateCpuLoad(5)">Level 5</button>
+  </div>
+
+  <h2>Task Log</h2>
+  <div id="task-log"></div>
+
+  <!-- Link to the main JavaScript file -->
+  <script src="main.js"></script>
+</body>
+</html>
